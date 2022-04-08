@@ -1,0 +1,82 @@
+## @file
+#
+#  NVIDIA Graphics Firmware Chips Module
+#
+#  Copyright (c) 1993-2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#
+#  SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+#
+##
+
+[Defines]
+  INF_VERSION                = 0x00010017
+  BASE_NAME                  = nvgop-chips-platform
+  FILE_GUID                  = 5608CC18-B4F7-41F0-A4F4-D2406D4C2A52
+  MODULE_TYPE                = UEFI_DRIVER
+  VERSION_STRING             = 0.01
+  UEFI_SPECIFICATION_VERSION = 0x0002000A
+  ENTRY_POINT                = NvGopDriverEntryPoint
+  UNLOAD_IMAGE               = NvGopDriverUnload
+
+[Packages.AARCH64]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/NVIDIA/NVIDIA.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+
+[Binaries.AARCH64]
+  PE32|nvgop-chips-platform.efi
+
+[Protocols.AARCH64]
+  gArmScmiClock2ProtocolGuid
+  gEfiComponentName2ProtocolGuid
+  gEfiComponentNameProtocolGuid
+  gEfiDebugPortProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiDriverBindingProtocolGuid
+  gEfiDriverConfiguration2ProtocolGuid
+  gEfiDriverConfigurationProtocolGuid
+  gEfiDriverDiagnostics2ProtocolGuid
+  gEfiDriverDiagnosticsProtocolGuid
+  gEfiDriverSupportedEfiVersionProtocolGuid
+  gEfiEdidActiveProtocolGuid
+  gEfiEdidDiscoveredProtocolGuid
+  gEfiEdidOverrideProtocolGuid
+  gEfiGetPcdInfoProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiHiiFontProtocolGuid
+  gEfiI2cMasterProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiMetronomeArchProtocolGuid
+  gEfiPcdProtocolGuid
+  gEfiPciIoProtocolGuid
+  gEfiResetNotificationProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiSimpleTextOutProtocolGuid
+  gEfiSmbiosProtocolGuid
+  gEfiUgaDrawProtocolGuid
+  gGetPcdInfoProtocolGuid
+  gNVIDIAClockParentsProtocolGuid
+  gNVIDIATestGraphicsOutputProtocolGuid
+  gPcdProtocolGuid
+
+[Guids.AARCH64]
+  gEfiAcpi10TableGuid
+  gEfiAcpi20TableGuid
+  gEfiEventLegacyBootGuid
+  gEfiEventReadyToBootGuid
+  gEfiGlobalVariableGuid
+  gEfiHobListGuid
+  gEfiPcAnsiGuid
+  gEfiPersistentVirtualCdGuid
+  gEfiPersistentVirtualDiskGuid
+  gEfiSasDevicePathGuid
+  gEfiSmbiosTableGuid
+  gEfiUartDevicePathGuid
+  gEfiVT100Guid
+  gEfiVT100PlusGuid
+  gEfiVTUTF8Guid
+  gEfiVirtualCdGuid
+  gEfiVirtualDiskGuid
+  gFdtHobGuid
+  gNVIDIAOSCarveoutHob
