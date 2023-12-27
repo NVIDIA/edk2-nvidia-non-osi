@@ -1,0 +1,37 @@
+## @file
+#
+#  IVC Client Driver
+#
+#  SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = IvcClientDxe
+  FILE_GUID                      = 381b1bc8-4254-4ddd-a81c-b618d411a9fc
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = IvcHvVblkInit
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/NVIDIA/NVIDIA.dec
+  Silicon/NVIDIA/NvidiaNonOsi.dec
+  ArmPkg/ArmPkg.dec
+
+[Binaries.AARCH64]
+  PE32|IvcClientDxe.efi
+  DXE_DEPEX|IvcClientDxe.depex
+
+[Protocols]
+  gNVIDIAIvcProtocol
+
+[Guids]
+
+[Depex]
+  gEfiCpuArchProtocolGuid

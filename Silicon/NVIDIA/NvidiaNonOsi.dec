@@ -1,0 +1,18 @@
+#/** @file
+#
+#  This Package provides all definitions for NVIDIA non-osi modules.
+#
+#  SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#**/
+
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = NvidiaNonOsi
+  PACKAGE_GUID                   = 2046e7b0-9951-49c0-b570-9aa01277af89
+  PACKAGE_VERSION                = 0.1
+
+[Protocols]
+    gNVIDIAIvcProtocol           = { 0xf9a07275, 0x0034, 0x489b, { 0xa1, 0x71, 0xd1, 0xc4, 0x45, 0x24, 0xfc, 0x13 }}

@@ -1,0 +1,39 @@
+## @file
+#
+#  UFS Block IO protocol implementation
+#
+#  SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = UfsBlockIo
+  FILE_GUID                      = aa1d08cd-9249-4f30-9291-4eb4d6a423d1
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = InitializeUfsBlockIoProtocol
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/NVIDIA/NVIDIA.dec
+  Silicon/NVIDIA/NvidiaNonOsi.dec
+  ArmPkg/ArmPkg.dec
+
+[Binaries.AARCH64]
+  PE32|UfsBlockIo.efi
+  DXE_DEPEX|UfsBlockIo.depex
+
+[Protocols]
+  gNVIDIAIvcProtocol
+  gEfiBlockIoProtocolGuid
+  gEfiDevicePathProtocolGuid
+
+[Guids]
+
+[Depex]
+  gEfiCpuArchProtocolGuid
