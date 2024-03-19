@@ -2,7 +2,7 @@
 #
 #  NVIDIA Graphics Firmware Chips Module
 #
-#  Copyright (c) 1993-2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#  SPDX-FileCopyrightText: Copyright (c) 1993-2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 #
 #  SPDX-License-Identifier: LicenseRef-NvidiaProprietary
 #
@@ -79,4 +79,3 @@
   gEfiVirtualCdGuid
   gEfiVirtualDiskGuid
   gFdtHobGuid
-  gNVIDIAOSCarveoutHob
