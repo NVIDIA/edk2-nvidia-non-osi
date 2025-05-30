@@ -2,7 +2,7 @@
 #
 #  NVIDIA Graphics Firmware Chips Module
 #
-#  SPDX-FileCopyrightText: Copyright (c) 1993-2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+#  SPDX-FileCopyrightText: Copyright (c) 1993-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 #
 #  SPDX-License-Identifier: LicenseRef-NvidiaProprietary
 #
@@ -26,6 +26,7 @@
 
 [Binaries.AARCH64]
   PE32|nvgop-chips-platform.efi
+  DXE_DEPEX|nvgop-chips-platform.depex
 
 [Protocols.AARCH64]
   gArmScmiClock2ProtocolGuid
@@ -79,3 +80,18 @@
   gEfiVirtualCdGuid
   gEfiVirtualDiskGuid
   gFdtHobGuid
+
+[Depex.AARCH64]
+  gNVIDIATegraI2cInitCompleteProtocolGuid       AND
+  gEfiBdsArchProtocolGuid                       AND
+  gEfiCpuArchProtocolGuid                       AND
+  gEfiMetronomeArchProtocolGuid                 AND
+  gEfiMonotonicCounterArchProtocolGuid          AND
+  gEfiRealTimeClockArchProtocolGuid             AND
+  gEfiResetArchProtocolGuid                     AND
+  gEfiRuntimeArchProtocolGuid                   AND
+  gEfiSecurityArchProtocolGuid                  AND
+  gEfiTimerArchProtocolGuid                     AND
+  gEfiVariableWriteArchProtocolGuid             AND
+  gEfiVariableArchProtocolGuid                  AND
+  gEfiWatchdogTimerArchProtocolGuid
